@@ -34,7 +34,7 @@ export class FullComponent implements OnInit {
 
   tabStatus = 'justified';
 
-  public isCollapsed = false;
+  isCollapsed = false;
 
   public innerWidth: any;
   public defaultSidebar: any;

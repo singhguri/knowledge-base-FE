@@ -7,19 +7,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './404/not-found.component';
-import {
-  SocialLoginModule,
-  SocialAuthServiceConfig,
-  SocialAuthService,
-} from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
+// import {
+//   SocialLoginModule,
+//   SocialAuthServiceConfig,
+//   SocialAuthService,
+// } from 'angularx-social-login';
+// import { GoogleLoginProvider } from 'angularx-social-login';
 
-import { AuthenticationRoutes } from './authentication.routing';
 import { OtpComponent } from './otp/otp.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { Title } from '@angular/platform-browser';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { AuthService } from '../services/auth.service';
 
 @NgModule({
   imports: [
@@ -64,23 +62,23 @@ import { AuthService } from '../services/auth.service';
     OtpComponent,
   ],
   providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '269416882456-r3vfl1e83v6a2hv0m49gs41oa48ikce3.apps.googleusercontent.com'
-            ),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
+    // {
+    //   provide: 'SocialAuthServiceConfig',
+    // useValue: {
+    //   autoLogin: false,
+    //   providers: [
+    // {
+    //   id: GoogleLoginProvider.PROVIDER_ID,
+    //   provider: new GoogleLoginProvider(
+    //     '269416882456-r3vfl1e83v6a2hv0m49gs41oa48ikce3.apps.googleusercontent.com'
+    //   ),
+    // },
+    //   ],
+    // } as SocialAuthServiceConfig,
+    // },
 
     Title,
-    SocialAuthService,
+    // SocialAuthService,
   ],
 })
 export class AuthenticationModule {}

@@ -1,4 +1,4 @@
-// import { JwtModule } from '@auth0/angular-jwt';
+import { JwtModule } from '@auth0/angular-jwt';
 import { UsersModule } from './components/users/users.module';
 import { FullComponent } from './layouts/full/full.component';
 import { FormsModule } from '@angular/forms';
@@ -49,25 +49,25 @@ export function tokenGetter() {
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    // NgbModule,
+    NgbModule,
     HttpClientModule,
     SharedModule,
-    // PerfectScrollbarModule,
+    PerfectScrollbarModule,
     FormsModule,
     AuthenticationModule,
     BrowserAnimationsModule,
     UsersModule,
-    // ToastrModule.forRoot({
-    //   preventDuplicates: true,
-    // }),
-    // RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+    ToastrModule.forRoot({
+      preventDuplicates: true,
+    }),
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     RouterModule.forRoot(routes),
-    // JwtModule.forRoot({
-    //   config: {
-    //     tokenGetter: tokenGetter,
-    //     allowedDomains: ['localhost:4201', 'foo.com', 'bar.com'],
-    //   },
-    // }),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:4201', 'foo.com', 'bar.com'],
+      },
+    }),
   ],
   providers: [
     BaseService,

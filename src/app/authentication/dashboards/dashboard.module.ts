@@ -6,8 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChartsModule } from 'ng2-charts';
-import { ChartistModule } from 'ng-chartist';
+// import { ChartsModule } from 'ng2-charts';
+// import { ChartistModule } from 'ng-chartist';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { JwtHelperService, JwtModule, JWT_OPTIONS } from '@auth0/angular-jwt';
@@ -20,8 +20,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     CommonModule,
     NgbModule,
-    ChartsModule,
-    ChartistModule,
+    // ChartsModule,
+    // ChartistModule,
     RouterModule.forChild([
       {
         path: '',

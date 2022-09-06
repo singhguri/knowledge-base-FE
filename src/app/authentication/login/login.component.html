@@ -58,8 +58,8 @@
                 <div class="password">
                   <input [type]="showPass ? 'text' : 'password'" formControlName="password" aria-label="Password"
                     aria-describedby="basic-addon1" class="form-control text-center" placeholder="Password">
-                  <span (click)="showPass=!showPass"><i class="mdi "
-                      [ngClass]="showPass ? 'mdi-eye' : 'mdi-eye-off'"></i></span>
+                  <span (click)="showPass=!showPass"><i class="fa "
+                      [ngClass]="showPass ? 'fa-eye' : 'fa-eye-slash'"></i></span>
                 </div>
                 <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password').invalid">
                   <small class="text-danger text-small" *ngIf="loginForm.get('password').errors?.required">Password

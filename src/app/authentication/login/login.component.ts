@@ -13,7 +13,6 @@ import { Subject, Subscription } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { Title } from '@angular/platform-browser';
 import { LoginService } from 'src/app/services/login.service';
-import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { debounceTime } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 import { MasterService } from 'src/app/services/master';
@@ -37,7 +36,6 @@ export class LoginComponent implements OnInit {
     private route: Router,
     private loginservice: AuthService,
     private toastr: ToastrService,
-    private authService: SocialAuthService,
     private register: RegisterService,
     private utility: UtilityService,
     private titleService: Title,
@@ -105,7 +103,7 @@ export class LoginComponent implements OnInit {
         },
         (error) => {
           ////console.log(error);
-          // this.toastr.error(error);
+          this.toastr.error(error);
           this.changeSuccessMessage(error);
         }
       )
@@ -123,27 +121,27 @@ export class LoginComponent implements OnInit {
   navigateToSignup() {
     this.route.navigate([`/auth/signup`]);
   }
-  signInWithGoogle(): void {
-    this.authService
-      .signIn(GoogleLoginProvider.PROVIDER_ID)
-      .then((x) => {
-        let body = {
-          firstname: x.firstName,
-          lastname: x.lastName,
-          emailid: x.email,
-          password: 'pv123$$',
-          addedon: new Date().toISOString(),
-          RegisteredBY: 'Gmail',
-          UserTypeId: 3828,
-          PlanId: 6545,
-          RoleID: 5302,
-        };
-        this.registerApi(body);
-      })
-      .catch((error) => {
-        this.toastr.error(error);
-      });
-  }
+  // signInWithGoogle(): void {
+  //   this.authService
+  //     .signIn(GoogleLoginProvider.PROVIDER_ID)
+  //     .then((x) => {
+  //       let body = {
+  //         firstname: x.firstName,
+  //         lastname: x.lastName,
+  //         emailid: x.email,
+  //         password: 'pv123$$',
+  //         addedon: new Date().toISOString(),
+  //         RegisteredBY: 'Gmail',
+  //         UserTypeId: 3828,
+  //         PlanId: 6545,
+  //         RoleID: 5302,
+  //       };
+  //       this.registerApi(body);
+  //     })
+  //     .catch((error) => {
+  //       this.toastr.error(error);
+  //     });
+  // }
   // signInWithFB(): void {
   //   this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(x => {
   //     let body = {
