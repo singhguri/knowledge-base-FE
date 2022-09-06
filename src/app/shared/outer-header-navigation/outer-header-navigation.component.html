@@ -1,0 +1,62 @@
+<div class="top-header bg-warning py-2 text-center">
+  <div class="container">
+    <span class="top-header__title mb-0 cursor-pointer font-16" routerLink="/auth/heavy-shipment">Start
+      shipping your heavy load @Rs.*7.5/per kg</span>
+  </div>
+</div>
+<div id="signup">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.sticky]="sticky" #menuBar>
+    <div class="container">
+      <a class="navbar-brand" href="https://bigship.in">
+        <img src="assets/images/background/bigship-logo.png" class="img-fluid" width="195" alt="logo_bigship">
+      </a>
+      <button class="navbar-toggler" (click)="isMenuCollapsed = !isMenuCollapsed" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <button class="navbar-toggler" [ngClass]="!showResponsiveMenu ? 'd-none':'d-inline-block;'" (click)="showResponsiveMenu = !showResponsiveMenu" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="">&times;</span>
+        </button> -->
+      <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <!-- <a class="nav-item nav-link" target="_blank" href="https://bigship.in/plans">Plans</a> -->
+          <a class="nav-item nav-link" href="https://bigship.in/heavy-shipment">Heavy Shipment</a>
+          <a class="nav-item nav-link" href="https://bigship.in/international-courier-service">International
+            Shipping</a>
+          <a class="nav-item nav-link" href="https://bigship.in/best-digital-marketing-service">Digital Marketing</a>
+          <a class="nav-item nav-link" href="javascript:void(0)" routerLink="/shipment-tracking">Shipment Tracking</a>
+
+          <a class="nav-item nav-link" target="_blank" href="https://bigship.in/blog/">Blog</a>
+          <a class="nav-item nav-link btn btn-primary text-white align-self-start mb-2 mb-md-0 mr-2 header-btn"
+            href="javascript:void(0)" (click)="navigate('login')" routerLink="/auth/login">Login</a>
+          <a class="nav-item nav-link btn btn-primary text-white align-self-start header-btn" href="javascript:void(0)"
+            (click)="navigate('register')" routerLink="/auth/signup">Sign Up</a>
+          <!-- <a class="nav-item nav-link rounded-button" target="_blank" href="https://bigship.in/shipment-tracking">Shipment Tracking</a> -->
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="mobile-navigation d-none  d-lg-none">
+    <div class="content">
+      <!-- <a class="nav-item nav-link" target="_blank" href="https://bigship.in/plans">Plans</a> -->
+      <a class="nav-item nav-link" href="javascript:void(0)" routerLink="/auth/heavy-shipment">Heavy
+        Shipment</a>
+      <a class="nav-item nav-link" href="https://bigship.in/international-courier-service">International Shipping</a>
+      <a class="nav-item nav-link" href="https://bigship.in/best-digital-marketing-service">Digital Marketing</a>
+      <a class="nav-item nav-link" href="javascript:void(0)" routerLink="/shipment-tracking">Shipment Tracking</a>
+      <a class="nav-item nav-link" target="_blank" href="https://bigship.in/blog/">Blog</a>
+      <a class="btn btn-primary btn-block text-white mb-2 mb-md-0" href="javascript:void(0)" (click)="navigate('login')"
+        routerLink="/auth/login">Login</a>
+      <a class="btn btn-primary btn-block text-white mt-0" href="javascript:void(0)" (click)="navigate('register')"
+        routerLink="/auth/signup">Sign Up</a>
+
+      <!-- <a class="nav-item nav-link"  href="javascript:void(0)" (click)="navigate('shipping')">Get An Estimate</a> -->
+      <!-- <a class="nav-item nav-link" target="_blank" href="https://bigship.in/shipment-tracking">Shipment Tracking</a> -->
+    </div>
+  </div>
+</div>

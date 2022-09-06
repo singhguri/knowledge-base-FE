@@ -1,0 +1,12 @@
+<div class="row" *ngIf="!gl.addUser">
+  <div class="col-md-10">
+    <!-- <h3>Users Manager</h3> -->
+  </div>
+  <div class="col-md-2">
+    <div class="d-flex justify-content-end">
+      <button (click)="addUser()" class="btn btn-primary"><i class="fa fa-plus"></i> ADD USER</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

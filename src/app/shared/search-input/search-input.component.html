@@ -1,0 +1,21 @@
+<div class="mh-100">
+  <div class="d-flex justify-content-center my-2">
+    <h2 class="heading text-white ">How can we help you ?</h2>
+  </div>
+  <div class="search-bar articleSearch">
+    <form [formGroup]="RelatedSearchForm" (ngSubmit)="SearchArticle()">
+      <div class="input-group">
+        <label for="support-search-input" class="hide">
+          Enter your search term here...
+        </label>
+        <input type="text" formControlName="supportSearch" placeholder="Enter your search term here..."
+          class="form-control rs-search" />
+        <div class="searchBtn">
+          <button class="btn btn-light" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

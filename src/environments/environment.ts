@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // APP: {
+  //   baseUrl: 'https://stagingapi.bigship.in',
+  // },
+  apiUrl: 'https://localhost:44369/api/',
 };
 
 /*

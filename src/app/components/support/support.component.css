@@ -1,0 +1,59 @@
+/* .help-center {
+  z-index: 3;
+  background-color: #f3f5f7;
+  border: 0;
+  color: #183247;
+  *zoom: 1;
+  border-radius: 6px;
+  border-bottom: 1px solid #dadfe3;
+} */
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  color: #2753d7;
+}
+
+.noStyle {
+  text-decoration: none !important;
+  color: black;
+}
+
+.subHeadingUnderline {
+  background: #02b875;
+  margin-top: 0 !important;
+}
+
+.articleHeadingContent {
+  width: 20rem;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.search {
+  height: 300px;
+}
+
+.container {
+  margin: 0 50px;
+}
+
+li.active {
+  background-color: #2680eb;
+  /* border-color: #2680eb; */
+  border: 2px solid #0e4f9d !important;
+}
+
+.bordered-grey {
+  border: 1px solid #e7e7e7;
+}
+
+#content {
+  margin: 1.5rem;
+  max-height: 50vh;
+  overflow: hidden;
+}

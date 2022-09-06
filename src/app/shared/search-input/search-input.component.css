@@ -1,0 +1,14 @@
+.rs-search {
+  /* max-width: 30rem; */
+  border-radius: 4px !important;
+}
+
+.searchBtn {
+  z-index: 100 !important;
+  position: relative;
+  right: 40px;
+}
+
+.articleSearch {
+  width: 40rem !important;
+}

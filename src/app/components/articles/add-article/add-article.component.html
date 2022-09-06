@@ -1,0 +1,49 @@
+<div class="bg-white px-2 py-2 rounded mt-1">
+  <div class="ml-2 mt-2">
+    <h4 *ngIf="!gl.article">Add New Article</h4>
+    <h4 *ngIf="gl.article">Update Article</h4>
+    <div class="text-secondary mb-4">
+      <!-- Create a brand new user and add them to this site. -->
+    </div>
+    <div class="mb-3"> <span class="text-danger"> (*) </span> <span class="text-secondary"> All Field Required</span>
+    </div>
+
+    <div class="w-50">
+      <!-- form -->
+      <form [formGroup]="AddArticle">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
+              <input formControlName="title" type="text" class="form-control text" placeholder="Enter Title"
+                id="title" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <!-- media -->
+              <!-- <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+              <input formControlName="lastName" type="text" class="form-control text" placeholder="Enter Last Name"
+                id="lastName" /> -->
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<ng-template #yesnoModal let-modal>
+  <div class="modal-header">
+    <h5>Are you Sure?</h5>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <button class="btn btn-primary px-4 mr-2" (click)="yes()">Yes</button>
+      <button class="btn btn-danger px-4" (click)="modal.dismiss('Cross click')">
+        No
+      </button>
+    </div>
+  </div>
+</ng-template>

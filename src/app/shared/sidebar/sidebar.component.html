@@ -1,0 +1,23 @@
+<nav class="sidebar-nav">
+  <ul id="sidebarnav">
+    <li class="sidebar-item" (click)="addActiveClass()" *ngFor="let sidebarnavItem of sidebarnavItems; let i=index"
+      [routerLinkActive]="[(sidebarnavItem.submenu.length > 0) ? (sidebarnavItem.showLink ? 'active' : null) : 'active']"
+      [class.menu-link-active]="sidebarnavItem.isSiblingLink ? sidebarnavItem.isSiblingLink : false">
+      <a class="sidebar-link waves-effect waves-dark d-flex d-md-block p-2 px-md-0 py-md-3"
+        [routerLink]="sidebarnavItem.submenu.length > 0 ? (sidebarnavItem.showLink ? sidebarnavItem.path : null) : sidebarnavItem.path">
+        <i [ngClass]="[sidebarnavItem.icon]"></i>
+        <span class="hide-menu ml-1 ml-md-0">{{sidebarnavItem.title}}</span>
+      </a>
+      <ul aria-expanded="false" class="collapse first-level"
+        [ngClass]="(mobileView && !showMobileMenu) ? 'd-none' : ''">
+        <li class="sidebar-item" *ngFor="let sidebarnavSubItem of sidebarnavItem.submenu;let i=index">
+          <a class="sidebar-link" href="javascript:void(0)" routerLinkActive="router-link-active"
+            [routerLink]="[sidebarnavSubItem.path]"
+            [class.sub-menu-link-active]="sidebarnavSubItem.isSiblingLink ? sidebarnavSubItem.isSiblingLink : false">
+            <span class="hide-menu">{{sidebarnavSubItem.title}}</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

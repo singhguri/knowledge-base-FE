@@ -1,0 +1,44 @@
+<!-- <app-input-search-center></app-input-search-center> -->
+<div class="container">
+  <hr>
+  <ng-container *ngIf="!gl.showSolution">
+    <app-search-input></app-search-input>
+  </ng-container>
+
+  <ng-container *ngIf="gl.showSolution">
+    <search-input-center></search-input-center>
+  </ng-container>
+
+  <hr>
+
+  <div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <ng-container *ngIf="headingModel.length > 0">
+        <a *ngIf="gl.showSolution" (click)="HideSolution()" class="clickable">Solution home</a>
+        <h3 class="card-title">{{headingModel[0].articleHeadingTitle}}</h3>
+        <hr class="subHeadingUnderline">
+        <ul *ngFor="let item of headingModel">
+          <hr>
+          <li>
+            <h4>item</h4>
+          </li>
+        </ul>
+        <h6 class="card-subtitle mb-1 mt-3 text-muted clickable" (click)="GetArticleById(item.kbHeadingId)">
+          {{item.kbHeadingTitle}}</h6>
+        <hr class="subHeadingUnderline">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="clickable" (click)="GetSolutionByArticleHeadingId(item.articleHeadingId)">
+              {{item.articleHeadingTitle}}
+              ({{item.subAritcleCount}}) </h4>
+            <div class="articleHeadingContent">
+              - <a class="noStyle clickable" (click)="GetSolutionByArticleId(item.articleId)">
+                {{item.articleTitle}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

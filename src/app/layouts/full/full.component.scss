@@ -1,0 +1,15 @@
+
+@media(min-width:768px) and (max-width:991px){
+    #main-wrapper .topbar .top-navbar .navbar-header{
+        width: 100%;
+        justify-content: space-between;
+    }
+    #main-wrapper .page-wrapper{
+        margin-left: 0;
+    }
+    #navbarSupportedContent {
+        position: absolute;
+        right: 0;
+        top: 64px;
+    }
+}

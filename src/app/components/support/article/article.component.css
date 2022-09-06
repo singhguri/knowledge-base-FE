@@ -1,0 +1,28 @@
+.search {
+  height: 300px;
+}
+
+.container {
+  margin: 0 50px;
+}
+
+li.active {
+  background-color: #2680eb;
+  /* border-color: #2680eb; */
+  border: 2px solid #0e4f9d !important;
+}
+
+.bordered-grey {
+  border: 1px solid #e7e7e7;
+}
+
+#content {
+  margin: 1.5rem;
+  max-height: 50vh;
+  overflow: hidden;
+  /* font-size: ; */
+}
+
+.title {
+  font: normal normal 600 40px/50px Roboto Slab;
+}

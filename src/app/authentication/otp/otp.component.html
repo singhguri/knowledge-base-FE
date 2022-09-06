@@ -1,0 +1,87 @@
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center"
+  style="background:url(assets/images/background/login-register.jpg) no-repeat center center;">
+  <div class="auth-box m-3 m-md-0">
+    <ngb-alert *ngIf="errorMessage" type="danger" (close)="errorMessage = ''">{{ errorMessage }}</ngb-alert>
+    <div id="otpform">
+      <!-- Form -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <h4 class="text-white">Thank You for choosing Bigship.in</h4>
+          <p class="text-white mb-0" *ngIf="!otpform">Kindly enter your mobile number to complete signup process</p>
+          <p class="text-white mb-0" *ngIf="otpform">Kindly enter your OTP to complete signup process</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+
+          <ng-container *ngIf="mobileform">
+            <form class="form-horizontal m-t-20" [formGroup]="mobileForm">
+              <div class="form-group  w-75 m-auto mb-2">
+                <div class="mb-3">
+                  <!-- <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="ti-user"></i></span>
+                                    </div> -->
+                  <input type="text" formControlName="mobile" class="form-control text-center"
+                    placeholder="Mobile Number">
+                  <div *ngIf="mobileForm.get('mobile')?.touched && mobileForm.get('mobile').invalid">
+                    <small class="text-danger" *ngIf="mobileForm.get('mobile').errors?.required">Mobile
+                      Number is Required</small>
+                    <small class="text-danger" *ngIf="mobileForm.get('mobile').errors?.pattern">Mobile
+                      Number is not valid</small>
+                  </div>
+                </div>
+
+              </div>
+              <div class="form-group  w-75  mx-auto" *ngIf="otpform">
+                <div class="mb-3">
+                  <!-- <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon2"><i class="ti-pencil"></i></span>
+                                    </div> -->
+                  <input type="text" formControlName="otp" aria-label="Password" aria-describedby="basic-addon1"
+                    class="form-control text-center" placeholder="Enter OTP">
+                  <div *ngIf="mobileForm.get('otp')?.touched && mobileForm.get('otp').invalid">
+                    <small class="text-danger" *ngIf="mobileForm.get('otp').errors?.required">OTP
+                      Required</small>
+
+                  </div>
+                  <div class="w-75">
+                    <a href="javascript:void(0)" *ngIf="timeleft===-1" (click)="resetOtp()" class="resent-text">
+                      Resend
+                      OTP</a>
+                    <a href="javascript:void(0)" class="resent-text" *ngIf="timeleft>0">Resend
+                      OTP after {{timer}}</a>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+              <div class="form-group text-center">
+                <div class="col-xs-12 p-b-20 mt-3">
+
+                  <button type="Submit" [disabled]="mobileForm.invalid" class="btn btn-block btn-md btn-info m-auto"
+                    (click)="sendVerificationCode(mobileForm,otpform)">
+                    Verify
+                  </button>
+                  <div class="w-100" *ngIf="otpform">
+                    <a href="javascript:void(0)" (click)="submitMobileNumber()" class="resent-text">Edit
+                      Mobile No.
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- <ng-container *ngIf="isLoading | async">
+    <app-api-spinner></app-api-spinner>
+</ng-container> -->

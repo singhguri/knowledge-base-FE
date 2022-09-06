@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+/* @import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css"; */
+
+body {
+  margin: 0;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21.875px;
+  color: #183247;
+  background-color: #f3f5f7;
+  background-image: none;
+  -webkit-font-feature-settings: "locl" 0;
+  -moz-font-feature-settings: "locl" 0;
+  -ms-font-feature-settings: "locl" 0;
+  font-feature-settings: "locl" 0;
+}
+
+.hide {
+  display: none;
+}
+
+.heading {
+  font-family: normal normal bold 50px/66px Roboto Slab;
+}
+.waybill-heading {
+  font-family: normal normal 600 40px/50px Roboto Slab;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.bg-blue {
+  background-color: #183247;
+}
+
+.bg-cus-primary {
+  background-color: #4c32e9;
+}
+
+.search-bar {
+  width: 30rem;
+  margin-left: 30px;
+}
+
+.bg-yellow {
+  background-color: #ffdd00 !important;
+}
+
+.bg-light-blue {
+  background-color: #0068c2 !important;
+}
+
+.text-light-blue {
+  color: #2680eb;
+}
+
+.bg-grey {
+  background: #e7e7e7;
+  color: #343434;
+}
+
+.text-primary {
+  color: #0894f1;
+}
+
+.text-purple {
+  color: #33045b;
+}
+
+.text-danger {
+  color: #ef0a0a;
+}
+
+.text-success {
+  color: #2b9000;
+}
+
+.text-secondary {
+  color: #565656;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+#toast-container > div {
+  opacity: 1;
+}

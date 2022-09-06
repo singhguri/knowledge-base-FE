@@ -1,0 +1,19 @@
+section {
+  background-color: #f3f3f3;
+}
+
+.w-10 {
+  width: 10rem !important;
+}
+
+.h-10 {
+  height: 10rem !important;
+}
+
+.h-80 {
+  height: 80px !important;
+}
+
+.w-80 {
+  width: 80px !important;
+}

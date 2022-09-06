@@ -1,0 +1,98 @@
+<div class="bg-white px-2 py-2 rounded mt-1">
+  <div class="ml-2 mt-2">
+    <h4 *ngIf="!gl.user">Add New User</h4>
+    <h4 *ngIf="gl.user">Update User</h4>
+    <div class="text-secondary mb-4">
+      Create a brand new user and add them to this site.
+    </div>
+    <div class="mb-3"> <span class="text-danger"> (*) </span> <span class="text-secondary"> All Field Required</span>
+    </div>
+
+    <div class="w-50">
+      <!-- form -->
+      <form [formGroup]="AddUser">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+              <input formControlName="firstName" type="text" class="form-control text" placeholder="Enter First Name"
+                id="firstName" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+              <input formControlName="lastName" type="text" class="form-control text" placeholder="Enter Last Name"
+                id="lastName" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+              <input formControlName="emailAddress" type="email" class="form-control text" placeholder="Enter Email ID."
+                id="email" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+              <input type="password" [disabled]="gl.user" formControlName="password" placeholder="Enter a password"
+                class="form-control text" id="password" />
+              <span *ngIf="gl.user" class="text-primary clickable" (click)="openModal(yesnoModal)">Reset
+                password</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="mobileNo" class="form-label">Mobile No. <span class="text-danger">*</span></label>
+              <input formControlName="mobileNumber" type="text" class="form-control text" placeholder="Enter Mobile No."
+                id="mobileNo" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
+              <select class="form-select form-select-lg custom-select text w-100" formControlName="isActive">
+                <option value="true">Active</option>
+                <option value="false">In-Active</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mb-3 form-check">
+              <input formControlName="userType" type="checkbox" class="form-check-input" id="role" />
+              <label class="form-check-label" for="role">Is Admin</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-12">
+            <button *ngIf="!gl.user" type="button" (click)="add()" class="btn btn-primary mr-3">Submit</button>
+            <button type="button" *ngIf="gl.user" (click)="update()" class="btn btn-primary mr-3">Submit</button>
+            <button type="button" (click)="cancel()" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<ng-template #yesnoModal let-modal>
+  <div class="modal-header">
+    <h5>Are you Sure?</h5>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <button class="btn btn-primary px-4 mr-2" (click)="yes()">Yes</button>
+      <button class="btn btn-danger px-4" (click)="modal.dismiss('Cross click')">
+        No
+      </button>
+    </div>
+  </div>
+</ng-template>

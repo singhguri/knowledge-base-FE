@@ -1,0 +1,28 @@
+<div class="overlay d-flex justify-content-center align-items-center" *ngIf="isLoader">
+  <div class="lds-ring">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+<div class="overlay justify-content-center align-items-center" *ngIf="progressLoader.loaderState">
+  <div class="modal align-items-center">
+    <div class=" modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header ">
+          <div class="modal-body">
+            <div class="cus-span">{{progressLoader.loaderText}}</div>
+            <div class="demo-container">
+              <div class="progress-bar">
+                <div class="progress-bar-value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

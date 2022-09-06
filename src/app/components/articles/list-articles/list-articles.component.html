@@ -1,0 +1,37 @@
+<table class="table table-striped table-curved mt-2">
+  <thead>
+    <tr>
+      <th class="mail-checkbox z-1">
+        <label class="container-label">
+          <input type="checkbox" [(ngModel)]="isSelectedAll" (click)="toggleAll()">
+          <span class="checkmark"></span>
+        </label>
+
+      </th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let article of articlesList">
+      <td>
+        <label class="container-label">
+          <input type="checkbox" [(ngModel)]="article.selected" (ngModelChange)="toggleOne($event,order)">
+          <span class="checkmark"></span>
+        </label>
+      </td>
+      <td class="text-left">{{article.title}}</td>
+      <td>{{article.author}}</td>
+      <td>{{article.updatedDate}}</td>
+      <td [ngClass]="article.isActive ? 'text-success' : 'text-danger'">{{article.isActive ? 'Active' : 'In-Active'}}
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="editArticle(user)">Edit</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

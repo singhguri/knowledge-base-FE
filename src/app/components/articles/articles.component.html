@@ -1,0 +1,11 @@
+<div class="row" *ngIf="!gl.addArticle">
+  <div class="col-md-10">
+  </div>
+  <div class="col-md-2">
+    <div class="d-flex justify-content-end">
+      <button (click)="addArticle()" class="btn btn-primary"><i class="fa fa-plus"></i> ADD ARTICLE</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

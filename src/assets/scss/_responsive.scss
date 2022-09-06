@@ -1,0 +1,375 @@
+// Responsive
+/*
+Template Name: Admin Template
+Author: Wrappixel
+
+File: scss
+*/
+
+
+/*============================================================== 
+ For Desktop & above all (1650px) 
+ ============================================================== */
+
+
+/*============================================================== 
+ For Laptop & above all (1370px) 
+ ============================================================== */
+
+
+ @media screen and (min-width:720px) and (max-width:1280px){
+    #signup .navbar-light .navbar-nav .nav-link {
+      font-size:0.9rem;
+    }
+  }
+//   @media screen and (min-width:1600px) {
+//     .container{
+//         max-width: 1320px !important;
+//     }
+// }
+@media screen and (min-width:1260px) and (max-width:1370px){
+    #signup .navbar-light .navbar-nav .nav-link {
+      font-size:1rem !important;
+    }
+  }
+  
+  @media screen and (min-width:720px) and (max-width:1260px){
+    #signup .navbar-light .navbar-nav .nav-link {
+      font-size:0.9rem !important;
+    }
+  }
+
+/*-- ============================================================== 
+ Small Desktop & above all (1024px) 
+ ============================================================== */
+ @media(min-width:992px) and (max-width:1024px){
+    #tracking .container .inner-wrapper .carousel .carousel-caption h3, #tracking .container .inner-wrapper .carousel .carousel-caption p{
+        font-size: 1.7rem;;
+    }
+    .non-pl .footer-widget .widget-title{
+        text-align: right;
+        img{
+            width: 90%;
+        }
+    }
+    .step-title{
+        font-size: 21px;
+    }
+ }
+ @media(min-width: 800px) and (max-width:991px) {
+    .page-wrapper {
+        margin-left: $sidebar-width-full;
+    }
+    .container{
+        max-width:1139px;
+    }
+}
+@media(min-width:576px) and (max-width:1024px){
+    #progress-bar-container li .step-inner {
+        position: absolute;
+        width: 100%;
+        top: 28px;
+        margin-top: 4px;
+        font-size: 10px;
+        text-transform: capitalize;
+    }
+    #progress-bar-container{
+        height: 70px;
+    }
+    #progress-bar-container li:before{
+        width: 25px;
+        height: 25px;
+    }
+ }
+ 
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+
+@include media-breakpoint-up(md) {
+    .bc-content{
+        justify-content: flex-end;
+    }
+    .site-footer .footer-widget .link-lists {
+        float: left;
+        width: 50%;
+    }
+    #signup .navbar-light .navbar-nav .nav-link {
+        // font-size:14px;
+      }
+    // .bg-img{
+    //     background: #89aab6;
+    // }
+    
+}
+
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+@include media-breakpoint-down(md) {
+    .do-block{
+        display: block!important;
+    }
+      
+
+	.topbar .mega-dropdown .dropdown-menu {
+		height: 100%;
+    }
+    .sidebar-nav{
+        background-color: black;
+        height: 100%;
+    }
+    .auth-wrapper .auth-box .login-btn-wrapper{
+        width: 53%;
+    }
+    #main-wrapper[data-sidebartype="mini-sidebar"] .left-sidebar{
+        left: -112px;
+    }
+    #main-wrapper.show-sidebar .left-sidebar{
+        left: 0;
+        position: fixed;
+        padding-top: 64px;
+    }
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"] .topbar{
+        padding: 25px 4px;
+    }
+    .topbar .top-navbar .dropdown-menu{
+        left: 9px !important;
+    }
+    #navbarSupportedContent{
+        background: #fff !important;
+    }
+    .custom-select {
+        margin-bottom: 10px;
+        width: 100% !important;
+    }
+    
+        .quote-form{
+            margin-left: 0 !important;
+        }
+        // nav{
+        //     padding: 0.5rem 1rem !important;
+        // }
+        .pricing-one-logo .block-title__title{
+            font-size: 20px !important;
+            line-height: 31px !important;
+        }
+        .courier1 {
+            // width: 50%;
+            margin-bottom: 20px;
+            height: 85px;
+        }
+        .footer-widget .widget-title {
+            margin-bottom: 14px !important;
+        }
+        .address{
+            text-align: center !important;
+        }
+        .address a{
+            font-size: 14px !important;
+        }
+        .address p{
+            font-size: 14px !important;
+        }
+        .site-footer .footer-widget .contact-infos li i.fa-map-marker{
+            bottom: -15px !important;
+        }
+        .site-footer .footer-widget .link-lists{
+            float: left;
+            width: 50%;
+        }
+        .site-footer .footer-widget img.img-fluid {
+            max-width: 36%;
+        }
+        // .iticks-pop-button{
+        //     left: 0 !important;
+        // }
+        .contactOuterBottom{
+            float: unset !important;
+            // margin-bottom: 24px !important;
+            padding: 102px 0 !important;
+        }
+        .pd-1{
+            padding-top: 66px !important;
+        }
+        #tracking .container .form {
+            position: absolute;
+            top: 40%;
+            left: 9%;
+            width: 83%;
+            z-index: 12;
+            background: rgba(29, 21, 21, 0.7);
+            padding: 20px;
+        }
+        #tracking .container .inner-wrapper .carousel .carousel-caption {
+            top: 8px;
+            left: 9%;
+            width: 71%;
+        }
+        #tracking .container .inner-wrapper .carousel .carousel-caption h3, #tracking .container .inner-wrapper .carousel .carousel-caption p{
+            font-size: 2.0rem;
+        }
+        #tracking .container .form h4{
+            color: #fff;
+        }
+        // #progress-bar-container li:not(:last-child):after{
+        //     top: 15%;
+        //     height: 7px;
+        // }
+}
+@media (max-width:575px){
+    .overlay{
+        .app-sidebar{
+            top: 0 !important;
+            width: 100%;
+        }
+        .timeline{
+            width: 100% !important;
+            margin-bottom: 56px !important;
+        }
+        .direction-r{
+            width: 195px !important;
+        }
+        .timeline:before{
+            left: 35% !important;
+        }
+        .direction-l .flag:before{
+            right: -36px !important;
+        }
+       
+    }
+    .site-footer .footer-widget img.img-fluid {
+        max-width: 100%;
+    }
+    .site-footer .footer-widget .contact-infos li i.fa-map-marker{
+        bottom: -14px !important;
+    }
+    
+    #process-orders{
+        .input-group-text{
+            padding: 0.375rem 0.65rem !important;
+        }
+    }
+    
+    #international{
+        .baner-lkm1{
+            height: 128px !important;
+        }
+        .safe-text h1{
+            font-size: 20px !important;
+        }
+        .block-title__title{
+            line-height: 31px !important;
+        }
+    }
+    .ris-menu{
+        display: block !important;
+    }
+    .iticks-pop-button {
+        top: 89% !important;
+        // right: 1% !important;
+        -webkit-animation-duration: inherit !important;
+        animation-duration: inherit !important;
+    }
+    .iticks-last-msg{
+        display: none !important;
+    }
+    .iticks-notif-msg{
+        display: none !important;
+    }
+    .progress-track{
+        padding: 0 0%;
+    }
+    #tracking-info .bl-1 {
+        border-left: 0;
+    }
+    #progressbar li{
+        font-size: 71%;
+    }
+    .vertical-timeline{
+        .status-card{
+            p{
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+    #tracking .container .form {
+        position: absolute;
+        top: 33%;
+        left: 9%;
+        width: 83%;
+        z-index: 12;
+        background: rgba(221, 226, 232, 0.7);
+        padding: 20px;
+    }
+    #tracking .picsum-img-wrapper{
+        padding-top: 63%;
+    }
+    #tracking .container .inner-wrapper .carousel .carousel-caption {
+        // top: 8px;
+        // left: 12%;
+        // width: 100%;
+        h3{
+            padding:7px 13px;
+        }
+    }
+    #tracking .container .inner-wrapper .carousel .carousel-caption h3, #tracking .container .inner-wrapper .carousel .carousel-caption p{
+        font-size: 1.7rem;
+    }
+    #tracking .container .form h4{
+        color: #000;
+    }
+    #progress-bar-container li .step-inner{
+        text-transform: none;
+        font-size: 9px;
+        top: 28px;
+        margin-top: 4px;
+
+    }
+    #progress-bar-container{
+        height: 58px;
+    }
+    #progress-bar-container li:before{
+        width: 17px;
+        height: 17px;
+    }
+    #progress-bar-container #line{
+        width: 78%;
+        left: 12%;
+        top: -20px;
+    }
+    // #progress-bar-container li:not(:last-child):after{
+    //     top: 10%;
+    //     height: 7px;
+    // }
+    #tracking-info .container{
+        padding: 6px;
+        width: 96%;
+    }
+    #tracking-info .track-label{
+        // display: inline-block;
+        width: 50%;
+        float: left;
+    }
+    #tracking-info .track-text{
+        float: right;
+        width: 50%;
+    }
+    .bg-img{
+        background-color:#89aab6;
+        background-image: none;
+    }
+    #signup nav{
+        padding: 0.5rem 1.0rem;
+    }
+    #signup .navbar-light .navbar-nav .nav-link{
+        display: block;
+        width: 100%;
+        &.btn-primary
+        {   display: inline;
+            width: auto;
+            padding: 10px 10px;
+        }
+    }
+}
