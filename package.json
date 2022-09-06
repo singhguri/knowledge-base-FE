@@ -21,7 +21,6 @@
     "@angular/router": "~10.2.5",
     "@auth0/angular-jwt": "^5.0.2",
     "@ng-bootstrap/ng-bootstrap": "^8.0.4",
-    "ngx-perfect-scrollbar": "9.0.0",
     "file-saver": "^2.0.5",
     "gzip-all": "^1.0.0",
     "handlebars": "^4.7.7",
